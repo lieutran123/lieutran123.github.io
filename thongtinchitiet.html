@@ -1,0 +1,496 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Home</title>
+
+	<link rel="stylesheet"href="css/style.css">
+	<link rel="stylesheet"href="css/style1.css">
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet"href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<section id="header" style="position: absolute;width: 100%;height: 90vh">
+		<div class="container-fluid">
+			<div class="slide1">
+				<div class="w3-content w3-section"style="min-width:100%">
+					<img class="mySlides w3-animate-bottom"src="images/home.jpg"style="">
+					<img class="mySlides w3-animate-bottom"src="images/banner2.png"style="">
+					<img class="mySlides w3-animate-bottom"src="images/banner3.jpg"style="">
+					<img class="mySlides w3-animate-bottom"src="images/banner4.jpg"style="">
+
+				</div>
+
+				<script>
+					var slideIndex = 1;showDivs(slideIndex);
+					function plusDivs(n){showDivs(slideIndex += n)}
+					function showDivs(n){var i;var x = document.getElementsByClassName("mySlides");
+					if (n > x.length){slideIndex = 1}
+						if (n < 1){slideIndex = x.length}
+							for (i = 0;i < x.length;
+								i++){x[i].style.display ="none"}
+								x[slideIndex-1].style.display ="block"}
+							</script>
+							<script>
+								var myIndex = 0;carousel();
+								function carousel(){var i;var x = document.getElementsByClassName("mySlides");for (i = 0;i < x.length;
+									i++){x[i].style.display ="none"}
+								myIndex++;
+								if (myIndex > x.length){myIndex = 1}
+									x[myIndex-1].style.display ="block";setTimeout(carousel,2500)}
+							</script>
+
+							<script>
+$(document).ready(function(){// settings
+	var $slider = $('.testimonial');// class or id of carousel slider
+	var $slide ='div.test';// could also use 'img' if you're not using a ul
+	var $transition_time = 1000;// 1 second
+	var $time_between_slides = 1500;
+	// 4 seconds
+
+	function classAnimate(){$(".progress")
+	.clearQueue()
+	.stop()
+	.css({width:'0%'}
+		)
+	.animate({width:"100%"}
+		,2500)}
+	classAnimate();
+	function slides(){return $slider.find($slide)}
+	slides().fadeOut();// set active classes
+	slides().first() .addClass('active');slides().first() .fadeIn($transition_time);
+	// auto scroll 
+	$interval = setInterval(function (){var $i = $slider.find($slide + '.active').index();slides().eq($i).removeClass('active');slides().eq($i).fadeOut($transition_time);if (slides().length == $i + 1) $i = -1;// loop to start
+
+
+		slides().eq($i + 1).fadeIn($transition_time);slides().eq($i + 1).addClass('active');classAnimate((slides().length))}
+		,$transition_time + $time_between_slides)}
+	);</script>
+</div>
+
+</div>
+</section>
+<section id="body">
+	<div class="left" style="z-index: 5;opacity: 1;">
+							
+								<!-- 	<div class="search">
+									    <input type="text" placeholder=" ">
+									    <div>
+									        <svg>
+									            <use xlink:href="#path">
+									        </svg>
+									    </div>
+									</div>
+									    
+									<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+									    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+									        <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+									    </symbol>
+									</svg> -->
+		<div id="contenuMenu" style="margin-top: 76px;">	
+			<div class="logo">
+				<img class="" src="images/logo1.png" alt="">
+			</div>
+			<!-- <div class="btnlogo">
+				
+			</div> -->
+			<br>
+			<br>
+				<div class="container tabmenu">
+					  <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="file:///D:/bni/front-end/danhsach.html">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					  <br>
+					   <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					  <br>
+					   <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					   
+				</div>
+		</div>
+
+										
+	</div>
+	<div id="contenerDeco" style="top: -1382px;"><img id="backDeco" src="images/backDco.png" alt="" style="transform: rotate(45deg);">
+	</div>
+
+	<div class="right" style="z-index: 0;">
+		<img src="images/right.png" alt="" style="height: 210px">	
+	</div>
+		
+				
+<!-- 	<div class="decoration" id="decoration_bottom" style="z-index: 1">
+	</div> -->
+	
+</section>
+	<section id="gioithieu" style="    padding-top: 500px;">
+		<div class="container">
+			<br>
+			<div class="col-md-12">
+				<div class="row">
+
+
+					<div class="col-md-8">
+						<p style="color: #660101"><strong>Lorem ipsum </strong>dolor sit amet,consectetur adipisicing elit. Quia sapiente ratione,quisquam aliquam repellendus.</p>
+						<hr style="border:1px solid #ff6f6f; width: 146px; margin-left: 10px; ">
+						<div class="col-md-4"><p style="color: #660101"><strong>SHARE</strong>this company</p></div>
+						<div class="col-md-8">
+							<h3 style="color: #660101">The History Of Company</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum, reprehenderit quam et optio voluptatem unde voluptas cumque iste! Animi dicta voluptas odio excepturi iste ducimus suscipit. Facere natus minima aliquam adipisci laudantium, vitae aut laboriosam, explicabo quaerat dolorum, placeat? Cum non quae dicta excepturi placeat nostrum animi eius reiciendis!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum, reprehenderit quam et optio voluptatem unde voluptas cumque iste! Animi dicta voluptas odio excepturi iste ducimus suscipit. Facere natus minima aliquam adipisci laudantium, vitae aut laboriosam, explicabo quaerat dolorum, placeat? Cum non quae dicta excepturi placeat nostrum animi eius reiciendis!</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="gtct">
+					
+								<div class="ct">
+									<div class="hinh1">
+										<p><strong>PAT</strong> COLD</p>
+									</div>
+									<div class="hinh2">
+										<p>Project (10)</p>
+									</div>
+								</div>
+					
+							<p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Beatae eos error magni eum quibusdam id iusto porro sunt illo! Eaque nostrum commodi,explicabo at. Est distinctio molestias explicabo voluptatibus cupiditate impedit incidunt perspiciatis,consectetur.</p>
+							<p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quisquam modi,accusantium similique quae qui,sit.</p>
+
+							<hr style="border:1px solid #ff6f6f; width: 146px; margin-left: 10px; ">
+
+							<p>Name:ABC</p>
+							<p>Major:Software</p>
+							<p>Major:Software</p>
+							<p>Major:Software</p>
+							<p>Major:Software</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+	<br>
+	<section id="tnvsm">
+		<div class="container vien">
+			<div class="col-md-12  ">
+				<div class="row ">
+					<div class="col-md-5">
+						<img src="images/home.jpg" alt="" style="width: 474px; height: 321px;margin-top: -40px;
+						margin-left: -69px;z-index: -1;position: absolute;">
+					</div>
+					<div class="col-md-7">
+						<center><h4 style="color: #660101">Vision and Misson</h4></center>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum in error consequuntur odio, facere veritatis, vel architecto sit numquam dolorem iste at officiis quam velit voluptatum perspiciatis beatae ratione consequatur enim ad. Molestias, velit sapiente! Aperiam labore, eveniet omnis deleniti.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum in error consequuntur odio, facere veritatis, vel architecto sit numquam dolorem iste at officiis quam velit voluptatum perspiciatis beatae ratione consequatur enim ad. Molestias, velit sapiente! Aperiam labore, eveniet omnis deleniti.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum in error consequuntur odio, facere veritatis, vel architecto sit numquam dolorem iste at officiis quam velit voluptatum perspiciatis beatae ratione consequatur enim ad. Molestias, velit sapiente! Aperiam labore, eveniet omnis deleniti.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+	<section id="duan">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="row"> 
+					<div class="column">
+						<div class="fontda">
+							<p style="color: #660101">THE</p>
+							<hr class="the">
+							<p style="color: #660101">PROJECT</p>
+							<hr class="project" >
+							<p style="color: #660101">OF COMPANY</p>
+						</div>
+						<div class="hinhct">
+
+							<img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+							<div class="overlay">
+								<a href="#" class="icon" title="User Profile">
+									<div class="right">
+										<div class="row">
+											<div class="col-md-7"></div>
+											<div class="col-md-5">
+												<div class="thecom">
+													<div class="hinh1">
+													<p><strong>PAT</strong> COLD</p>
+												</div>
+												<div class="hinh2">
+													<p>Project (10)</p>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="hinhct">
+							<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+							<div class="overlay">
+								<a href="#" class="icon" title="User Profile">
+									<i class="fa fa-user"></i>
+								</a>
+							</div>
+						</div>
+
+
+
+						<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+					</div>
+					<div class="column">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+					</div>  
+					<div class="column">
+						<img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+					</div>
+					<div class="column">
+						<img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+						<img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<br>
+	<section id="contact">
+		<div class="container">
+
+			<div class="col-md-12">
+				<hr class="contac">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6">
+								<br>
+								<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p>frist name *</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<br>
+								<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p>frist name *</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<br>
+								<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p >frist name *</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<br>
+								<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p>frist name *</p>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="parallelogram2">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram3">
+									<p >frist name *</p>
+								</div>
+								<br>
+								<textarea rows="12" cols="60">
+									At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+								</textarea>
+								<br>
+								<br>
+								<button style="border: 0px solid;background-color: #23171700;margin-left: 417px;">
+								<div class="parallelogram5">
+									
+								</div>
+								<div class="parallelogram6">
+									<p>Sent</p>
+								</div>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<center><h4 style="color: #660101">Contact Consulting</h4></center>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla earum veniam eaque molestias architecto amet rerum quod porro accusantium illum minima deleniti libero adipisci, praesentium quis sed expedita, ex consequatur.</p>
+						<hr class="consu">
+						<p>Address: 91 Kinh Dương Vương, Thanh Khê Tây, Đà Nẵng</p>
+						<p>Website: www.abc.com</p>
+						<p><i class="fa fa-phone" aria-hidden="true"></i> 19002003</p>
+						<p><i class="fa fa-facebook" aria-hidden="true"></i> fb.com/abc</p>
+						<p><i class="fa fa-instagram" aria-hidden="true"></i> Order</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+	<br>
+	<section id="footer2">
+	<div class="col-md 12">
+				<div class="row footer1">
+					<div class="col-md-10 about">
+						<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">About</a>
+							<div id="id01" class="modal">
+ 								<form class="modal-content animate" action="/action_page.php" method="post">
+    								<div class="imgcontainer">
+								      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+								
+								    </div>
+
+								    <div class="container">
+								      <div class="parallelogram7"></div>
+								      <div class="parallelogram8">
+								      	<p>About</p>
+								      </div>
+								   	<div class="thongtincs">
+								   		    <strong>1. Information</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio quaerat, repudiandae tempore nam.</p>
+					   <strong>2.Descrips</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+				<strong>3.Contact</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      		<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      		<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      			<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+								   	</div>
+								    </div>
+
+								  </form>
+								</div>
+
+							<script>
+							// Get the modal
+							var modal = document.getElementById('id01');
+
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							    if (event.target == modal) {
+							        modal.style.display = "none";
+							    }
+							}
+							</script>
+					</div>
+					<div class="col-md-2 chat">
+			
+						<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i class="fa fa-comments" aria-hidden="true"></i></a>
+							<div id="id02" class="modal">
+ 								<form class="modal-content animate" action="/action_page.php" method="post">
+    								<div class="imgcontainer">
+								      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+								
+								    </div>
+
+								    <div class="container">
+								      <div class="parallelogram7"></div>
+								      <div class="parallelogram8">
+								      	<p>About</p>
+								      </div>
+								   	<div class="thongtinkh">
+										<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p>frist name *</p>
+								</div>
+								<br>
+								<div class="parallelogram">
+									<input type="text" placeholder="khách hàng">
+								</div>
+								<div class="parallelogram1">
+									<p>frist name *</p>
+								</div>
+								<br>
+									<textarea rows="12" cols="40" style="height: 113px;">
+									At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+								</textarea>
+								<br>
+								<button style="border: 0px solid;background-color: #23171700;margin-left: 253px;margin-top: 21px;">
+								<div class="parallelogram5">
+									
+								</div>
+								<div class="parallelogram6">
+									<p>Sent</p>
+								</div>
+								</button>
+								   	</div>
+								    </div>
+
+								  </form>
+								</div>
+
+							<script>
+							// Get the modal
+							var modal = document.getElementById('id02');
+
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							    if (event.target == modal) {
+							        modal.style.display = "none";
+							    }
+							}
+							</script>
+					</div>
+				</div>
+			</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Home</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body style="  background-color:  #660101;">
+<div id="trang" style="">
+	<section id="header" style="position: absolute;overflow: hidden;width: 100%;height: 94vh;">
+		<div class="slide">
+		<div class="w3-content w3-section" style="min-width:100%">
+		<div class=" w3-animate-bottom mySlides ">
+		  	<img class=" " src="images/home.jpg" style="width: 100%;height: 100%;">
+		  	<div class="w3-display-topright  w3-container banner">
+			    		<div class="row">
+					<div class="col-md-7"></div>
+					<div class="col-md-5">
+						<div class="hinh1">
+							<p><strong>PAT</strong> COLD</p>
+						</div>
+						<div class="hinh2">
+							<p>Project (11)</p>
+						</div>
+					</div>
+				</div>
+			  		</div>
+		</div>
+			  	<div class=" w3-animate-bottom mySlides ">
+		  	<img class=" " src="images/banner2.png" style="width: 100%;height: 100%;">
+		  	<div class="w3-display-topright  w3-container banner">
+			    		<div class="row">
+					<div class="col-md-7"></div>
+					<div class="col-md-5">
+						<div class="hinh1">
+							<p><strong>PAT</strong> COLD</p>
+						</div>
+						<div class="hinh2">
+							<p>Project (12)</p>
+						</div>
+					</div>
+				</div>
+			  		</div>
+		</div>
+			  	<div class=" w3-animate-bottom mySlides ">
+		  	<img class=" " src="images/banner3.jpg" style="width: 100%;height: 100%;">
+		  	<div class="w3-display-topright  w3-container banner">
+			    		<div class="row">
+					<div class="col-md-7"></div>
+					<div class="col-md-5">
+						<div class="hinh1">
+							<p><strong>PAT</strong> COLD</p>
+						</div>
+						<div class="hinh2">
+							<p>Project (113)</p>
+						</div>
+					</div>
+				</div>
+			  		</div>
+		</div>
+			  	<div class=" w3-animate-bottom mySlides ">
+		  	<img class=" " src="images/banner4.jpg" style="width: 100%;height: 100%;">
+		  	<div class="w3-display-topright  w3-container banner">
+			    		<div class="row">
+					<div class="col-md-7"></div>
+					<div class="col-md-5">
+						<div class="hinh1">
+							<p><strong>PAT</strong> COLD</p>
+						</div>
+						<div class="hinh2">
+							<p>Project (10)</p>
+						</div>
+					</div>
+				</div>
+			  		</div>
+		</div>
+		
+			  <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)"><img src="images/Polygon9.png" alt=""></button>
+			  <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)"><img src="images/Polygon10.png" alt=""></button>
+		
+			</div>
+		
+			<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+		
+		
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+		
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+			     x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block"; 
+		
+		
+			}
+			</script>
+			<script>
+			var myIndex = 0;
+			carousel();
+		
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2500);    
+			}
+			</script>
+		
+			<script>
+		$(document).ready(function(){
+			            // settings
+			            var $slider = $('.testimonial'); // class or id of carousel slider
+			            var $slide = 'div.test'; // could also use 'img' if you're not using a ul
+			            var $transition_time = 1000; // 1 second
+			            var $time_between_slides = 1500; // 4 seconds
+		
+			            function classAnimate(){
+			                $( ".progress" )
+			                .clearQueue()
+			                .stop()
+			                .css(
+			                    {width:'0%'}
+			                )
+			                .animate({
+			                    width: "100%"
+			                }, 2500);
+		
+			            }
+			            classAnimate();
+			            function slides(){
+			              return $slider.find($slide);
+			            }
+		
+			            slides().fadeOut();
+		
+			            // set active classes
+			            slides().first() .addClass('active') ;
+			            slides().first() .fadeIn($transition_time);
+		
+			            // auto scroll 
+			            $interval = setInterval(
+			                    function () {
+			                        var $i = $slider.find($slide + '.active').index();
+		
+			                        slides().eq($i).removeClass('active');
+			                        slides().eq($i).fadeOut($transition_time);
+		
+			                        if (slides().length == $i + 1) $i = -1;
+		
+			                        // loop to start
+		
+		
+			                        slides().eq($i + 1).fadeIn($transition_time);
+			                        slides().eq($i + 1).addClass('active');
+			                        
+			                        classAnimate((slides().length));
+		
+			                    }
+			                    , $transition_time + $time_between_slides
+			            );
+		
+		
+		
+		
+			        });
+			</script>
+		</div>
+
+	
+	</section>
+<section id="body">
+	<div class="left" style="z-index: 5;opacity: 1;">
+							
+								<!-- 	<div class="search">
+									    <input type="text" placeholder=" ">
+									    <div>
+									        <svg>
+									            <use xlink:href="#path">
+									        </svg>
+									    </div>
+									</div>
+									    
+									<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+									    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+									        <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+									    </symbol>
+									</svg> -->
+		<div id="contenuMenu" style="margin-top: 76px;">	
+			<div class="logo">
+				<img class="" src="images/logo1.png" alt="">
+			</div>
+			<!-- <div class="btnlogo">
+				
+			</div> -->
+			<br>
+			<br>
+				<div class="container tabmenu">
+					  <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="file:///D:/bni/front-end/danhsach.html">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					  <br>
+					   <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					  <br>
+					   <div class="dropdown cn">
+					    <a class="dropdown-toggle" type="button" data-toggle="dropdown"><hr>
+							</a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">HTML</a></li>
+		
+					    </ul>
+					  </div>
+					   
+				</div>
+		</div>
+
+										
+	</div>
+	<div id="contenerDeco" style="top: -1382px;"><img id="backDeco" src="images/backDco.png" alt="" style="transform: rotate(45deg);">
+	</div>
+
+	<div class="right" style="z-index: 0;">
+		<img src="images/right.png" alt="" style="height: 210px">	
+	</div>
+		
+				
+	<div class="decoration" id="decoration_bottom" style="z-index: 1">
+	</div>
+	<div class="testimonial">
+	       
+	        <div class="bar">
+	            <div class="progress"></div>
+	        </div>
+	    </div>
+	
+
+</section>
+<section id="footer">
+
+	<div class="about">
+						<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">About</a>
+							<div id="id01" class="modal">
+ 								<form class="modal-content animate" action="/action_page.php" method="post">
+    								<div class="imgcontainer">
+								      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+								
+								    </div>
+
+								    <div class="container">
+								      <div class="parallelogram7"></div>
+								      <div class="parallelogram8">
+								      	<p>About</p>
+								      </div>
+								   	<div class="thongtincs">
+								   		    <strong>1. Information</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio quaerat, repudiandae tempore nam.</p>
+					   <strong>2.Descrips</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+						<strong>3.Contact</strong>
+					      	<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      		<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      		<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+					      			<p class="tt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto explicabo accusantium nobis dolore, et?</p>
+								   	</div>
+								    </div>
+
+								  </form>
+								</div>
+
+							<script>
+							// Get the modal
+							var modal = document.getElementById('id01');
+
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							    if (event.target == modal) {
+							        modal.style.display = "none";
+							    }
+							}
+							</script>
+					</div>
+					
+	<div class="chat">
+
+		<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i class="fa fa-comments" aria-hidden="true"></i></a>
+			<div id="id02" class="modal">
+					<form class="modal-content animate" action="/action_page.php" method="post">
+					<div class="imgcontainer">
+				      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+				
+				    </div>
+
+				    <div class="container">
+				      <div class="parallelogram7"></div>
+				      <div class="parallelogram8">
+				      	<p>About</p>
+				      </div>
+				   	<div class="thongtinkh">
+						<div class="parallelogram">
+					<input type="text" placeholder="khách hàng">
+				</div>
+				<div class="parallelogram1">
+					<p>frist name *</p>
+				</div>
+				<br>
+				<div class="parallelogram">
+					<input type="text" placeholder="khách hàng">
+				</div>
+				<div class="parallelogram1">
+					<p>frist name *</p>
+				</div>
+				<br>
+					<textarea rows="12" cols="40" style="height: 113px;">
+					At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+				</textarea>
+				<br>
+				<button style="border: 0px solid;background-color: #23171700;margin-left: 253px;margin-top: 21px;">
+				<div class="parallelogram5">
+					
+				</div>
+				<div class="parallelogram6">
+					<p>Sent</p>
+				</div>
+				</button>
+				   	</div>
+				    </div>
+
+				  </form>
+				</div>
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById('id02');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal) {
+			        modal.style.display = "none";
+			    }
+			}
+			</script>
+	</div>
+		
+</section>
+</div>
+</body>
+</html>
